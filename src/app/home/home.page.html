@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Workout Programs
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+  <ion-list class="workout-list">
+    <!-- Workout Program 1 -->
+    <ion-item button (click)="goToProgram('program1')" >
+      <ion-label>Weight Loss Program</ion-label>
+    </ion-item>
+
+    
+  </ion-list>
+  <ion-list class="workout-list">
+    <!-- Workout Program 2 -->
+    <ion-item button (click)="goToProgram('program2')">
+      <ion-label>Muscle Gain Program</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+

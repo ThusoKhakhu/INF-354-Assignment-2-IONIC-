@@ -1,0 +1,39 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Muscle Gain Program</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding content-center">
+  <div class="card-container">
+    <ion-card *ngIf="muscleGainProgram">
+      <ion-card-header>
+        <ion-card-title>{{ muscleGainProgram.name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p> {{ muscleGainProgram.description }}</p>
+        <p><strong>Exercises:</strong> {{ muscleGainProgram.exercises.join(', ') }}</p>
+        <p><strong>Duration:</strong> {{ muscleGainProgram.duration }}</p>
+        <p><strong>Equipment:</strong> {{ muscleGainProgram.equipment.join(', ') }}</p>
+      </ion-card-content>
+
+      <!-- Mark as Complete Button -->
+      <ion-button expand="full"
+        [disabled]="isComplete"  
+        [color]="isComplete ? 'medium' : 'primary'" 
+        (click)="markAsComplete()">
+        {{ isComplete ? 'Complete' : 'Mark as Complete' }}
+      </ion-button>
+    </ion-card>
+
+    <!-- Navigation Buttons -->
+    <ion-button expand="full" color="primary" (click)="goBackToHome()">
+      GO BACK TO HOME
+    </ion-button>
+    <ion-button expand="full" color="primary" (click)="viewProgress()">
+      VIEW PROGRESS
+    </ion-button>
+  </div>
+</ion-content>
+

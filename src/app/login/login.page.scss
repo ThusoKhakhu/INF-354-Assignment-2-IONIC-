@@ -1,0 +1,21 @@
+ion-content {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%; /* Make sure content takes full height */
+  }
+  
+  .center-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-card {
+    width: 100%;
+    max-width: 400px; /* Maximum width for the card */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional, for styling */
+  }
+  

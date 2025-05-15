@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Progress</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ weightLossProgram.name }} - Completed </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Reset Progress Button -->
+  <ion-button expand="full" color="primary" (click)="resetProgress()" [disabled]="isLoading">
+    <ng-container *ngIf="!isLoading; else loading">
+      Reset Progress
+    </ng-container>
+    <ng-template #loading>
+      <ion-spinner name="crescent" slot="start"></ion-spinner>
+      Resetting...
+    </ng-template>
+  </ion-button>
+  
+   <!-- Back to home Progress Button -->
+   <ion-button 
+    
+   expand="full" 
+   color="primary" 
+   (click)="goBackToHome()"> 
+   GO BACK HOME
+ </ion-button>
+
+  <!-- View Progress Button -->
+  <ion-button 
+    expand="full"
+    color="primary"
+    >
+    View  Workouts
+  </ion-button>
+</ion-content>

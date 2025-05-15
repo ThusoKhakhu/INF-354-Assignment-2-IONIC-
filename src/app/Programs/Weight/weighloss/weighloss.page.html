@@ -1,0 +1,36 @@
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Weight Loss Program</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card *ngIf="weightLossProgram">
+    <ion-card-header>
+      <ion-card-title>{{ weightLossProgram.name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ weightLossProgram.description }}</p>
+      <p><strong>Exercises:</strong> {{ weightLossProgram.exercises.join(', ') }}</p>
+      <p><strong>Duration:</strong> {{ weightLossProgram.duration }}</p>
+      <p><strong>Equipment:</strong> {{ weightLossProgram.equipment.join(', ') }}</p>
+    </ion-card-content>
+
+    <ion-button 
+      expand="full" 
+      [disabled]="isComplete"  
+      [color]="isComplete ? 'medium' : 'primary'"
+      (click)="markAsComplete()">
+      {{ isComplete ? 'Complete' : 'Mark as Complete' }}
+    </ion-button>
+
+    <ion-button expand="full" color="primary" (click)="goBackToHome()">
+      GO BACK TO HOME
+    </ion-button>
+
+    <ion-button expand="full" color="primary" (click)="viewProgress()">
+      VIEW PROGRESS
+    </ion-button>
+  </ion-card>
+</ion-content>
